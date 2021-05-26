@@ -1,5 +1,20 @@
-$colorprimary: #134567;
+@import "./base/base";
+@import "./base/typography";
 
-body {
-    background-color: $colorprimary;
-}
+@import "./components/buttons";
+
+@import "./layouts/header";
+@import "./layouts/nav";
+@import "./layouts/container";
+@import "./layouts/footer";
+
+
+@import "./pages/index";
+@import "./pages/alafrançaise";
+@import "./pages/lanoteenchantee";
+@import "./pages/lapalettedugout";
+@import "./pages/ledelicedessens";
+
+@import "./utils/variables";
+@import "./utils/functions";
+@import "./utils/mixins";
