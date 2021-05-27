@@ -1,0 +1,31 @@
+.footer {
+    background: #353535;
+    padding: 25px 20px;
+    &__title {
+        h2 {
+            font-family: "shrikhand", Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            font-weight: lighter;
+            color: white;
+            margin-bottom: 10px;           
+        }
+    }
+    &__nav {
+        ul {
+            list-style-type: none;
+            line-height: 1.8;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        .fa-utensils {
+            margin-right: 10px;
+            font-size: 14px;
+        }
+        .fa-hands-helping {
+            margin-right: 9px;
+            font-size: 11px;
+        }
+    }
+}
