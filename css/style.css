@@ -1,7 +1,55 @@
 @charset "UTF-8";
-/* Définition des polices personnalisées */
+/* Eléments principaux de la page */
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#bloc-page {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+/* Définition des polices personnalisées */
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 400;
+}
+
+h2 {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  font-size: 28px;
+}
+
+.header {
+  text-align: center;
+}
+.header__logo img {
+  width: 60%;
+}
+
+.restaurants {
+  display: flex;
+  flex-direction: column;
+}
+
+.restaurants-card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0px 2px 10px lightgray;
+  margin: 10px;
+  overflow: hidden;
+}
+.restaurants-card__img {
+  height: 200px;
+}
+
 /* $heading-shadow-size: .55rem;
 $layout-margin: 6rem;
 $grid-gutter: $layout-margin * .25; */

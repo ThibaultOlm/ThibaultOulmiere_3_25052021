@@ -1,0 +1,17 @@
+.restaurants {
+    display: flex;
+    flex-direction: column;
+}
+
+.restaurants-card {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0px 2px 10px rgb(211, 211, 211);
+    margin: 10px;
+    overflow: hidden;
+    &__img {
+        height: 200px;
+    }
+}
