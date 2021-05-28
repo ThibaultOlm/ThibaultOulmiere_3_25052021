@@ -1,0 +1,8 @@
+@mixin gradient-button {
+    padding: 18px;
+    border-radius: 35px;
+    background: linear-gradient(170deg, #FF79DA, #9356DC);
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+}
