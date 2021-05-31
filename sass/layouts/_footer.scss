@@ -4,6 +4,9 @@
     @include tablet-only{
         padding: 30px 40px; 
     }
+    @include laptop-small{
+        padding:40px 60px;
+    }
     &__title {
         h2 {
             font-family: "shrikhand", Arial, Helvetica, sans-serif;
@@ -13,7 +16,11 @@
             margin-bottom: 10px;
             @include tablet-only{
                 font-size: 1.7em;
-            }        
+            }
+            @include laptop-small{
+                font-size: 2.3em;
+                padding-bottom: 10px;
+            }
         }
     }
     &__nav {
@@ -23,6 +30,9 @@
             @include tablet-only{
                 display: flex;
                 flex-wrap: wrap;
+            }
+            @include laptop-small{
+                width: 700px;
             }
         }
         li {

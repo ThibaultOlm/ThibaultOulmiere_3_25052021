@@ -49,6 +49,13 @@
         column-gap: 50px;
         row-gap: 35px;
     }
+    @include laptop-small{
+        column-gap: 24px;
+    }
+    @include laptop{
+        padding-left: 60px;
+        column-gap: 60px;
+    }
     & h2 {
         @include tablet-only{
             flex: 100%;
@@ -85,10 +92,13 @@
     padding: 50px 20px;
     @include tablet-only{
         padding: 45px 40px 60px 40px;
-        flex-direction:unset;
+        flex-direction:initial;
         flex-wrap: wrap;
         row-gap: 40px;
         column-gap: 40px;
+    }
+    @include laptop{
+        padding: 45px 60px 70px 60px;
     }
     & h2 {
         @include tablet-only{
@@ -107,6 +117,9 @@
     position: relative;
     @include tablet-only{
         flex: 40%;
+    }
+    @include laptop{
+        flex: 20%;
     }
     a {
         text-decoration: none;

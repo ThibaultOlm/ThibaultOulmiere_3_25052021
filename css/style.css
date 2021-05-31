@@ -31,6 +31,11 @@ h3 {
   font-weight: 700;
   font-size: 20px;
 }
+@media all and (max-width: 320px) {
+  h3 {
+    font-size: 1em;
+  }
+}
 
 h4 {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
@@ -45,6 +50,16 @@ h4 {
   width: 55%;
   padding: 20px;
 }
+@media all and (min-width: 1024px) {
+  .header__logo img {
+    width: 40%;
+  }
+}
+@media all and (min-width: 1440px) {
+  .header__logo img {
+    width: 30%;
+  }
+}
 
 .header-rest__logo {
   display: flex;
@@ -56,12 +71,22 @@ h4 {
     padding: 20px 40px;
   }
 }
+@media all and (min-width: 1440px) {
+  .header-rest__logo {
+    padding: 30px 60px;
+  }
+}
 .header-rest__logo img {
   width: 55%;
 }
 @media all and (min-width: 768px) {
   .header-rest__logo img {
     width: 30%;
+  }
+}
+@media all and (min-width: 1440px) {
+  .header-rest__logo img {
+    width: 20%;
   }
 }
 .header-rest__logo i {
@@ -76,6 +101,12 @@ h4 {
     padding-right: 230px;
   }
 }
+@media all and (min-width: 1440px) {
+  .header-rest__logo i {
+    margin-top: 18px;
+    padding-right: 540px;
+  }
+}
 
 .footer {
   background: #353535;
@@ -84,6 +115,11 @@ h4 {
 @media all and (min-width: 768px) {
   .footer {
     padding: 30px 40px;
+  }
+}
+@media all and (min-width: 1024px) {
+  .footer {
+    padding: 40px 60px;
   }
 }
 .footer__title h2 {
@@ -98,6 +134,12 @@ h4 {
     font-size: 1.7em;
   }
 }
+@media all and (min-width: 1024px) {
+  .footer__title h2 {
+    font-size: 2.3em;
+    padding-bottom: 10px;
+  }
+}
 .footer__nav ul {
   list-style-type: none;
   line-height: 1.8;
@@ -106,6 +148,11 @@ h4 {
   .footer__nav ul {
     display: flex;
     flex-wrap: wrap;
+  }
+}
+@media all and (min-width: 1024px) {
+  .footer__nav ul {
+    width: 700px;
   }
 }
 @media all and (min-width: 768px) {
@@ -185,6 +232,17 @@ h4 {
     row-gap: 35px;
   }
 }
+@media all and (min-width: 1024px) {
+  .operation {
+    column-gap: 24px;
+  }
+}
+@media all and (min-width: 1440px) {
+  .operation {
+    padding-left: 60px;
+    column-gap: 60px;
+  }
+}
 @media all and (min-width: 768px) {
   .operation h2 {
     flex: 100%;
@@ -214,11 +272,36 @@ h4 {
   margin-left: -32px;
   margin-right: 20px;
 }
+@media all and (min-width: 1024px) {
+  .operation__step p {
+    margin-right: 10px;
+  }
+}
+@media all and (min-width: 1440px) {
+  .operation__step p {
+    margin-right: 24px;
+  }
+}
 .operation__step i {
   margin-top: 3px;
   margin-right: 20px;
   color: #7e7e7e;
   font-size: 18px;
+}
+@media all and (min-width: 1024px) {
+  .operation__step i {
+    margin-right: 14px;
+  }
+}
+@media all and (min-width: 1440px) {
+  .operation__step i {
+    margin-right: 20px;
+  }
+}
+@media all and (max-width: 320px) {
+  .operation__step i {
+    margin-top: 1px;
+  }
 }
 
 .restaurants {
@@ -231,10 +314,15 @@ h4 {
 @media all and (min-width: 768px) {
   .restaurants {
     padding: 45px 40px 60px 40px;
-    flex-direction: unset;
+    flex-direction: initial;
     flex-wrap: wrap;
     row-gap: 40px;
     column-gap: 40px;
+  }
+}
+@media all and (min-width: 1440px) {
+  .restaurants {
+    padding: 45px 60px 70px 60px;
   }
 }
 @media all and (min-width: 768px) {
@@ -255,6 +343,11 @@ h4 {
 @media all and (min-width: 768px) {
   .restaurants-card {
     flex: 40%;
+  }
+}
+@media all and (min-width: 1440px) {
+  .restaurants-card {
+    flex: 20%;
   }
 }
 .restaurants-card a {
@@ -299,6 +392,11 @@ h4 {
   height: 250px;
   object-fit: cover;
 }
+@media all and (min-width: 1440px) {
+  .sub-header-restaurant__img img {
+    height: 400px;
+  }
+}
 .sub-header-restaurant__title {
   background: #f6f6f6;
   display: flex;
@@ -312,10 +410,20 @@ h4 {
     padding: 30px 40px;
   }
 }
+@media all and (min-width: 1440px) {
+  .sub-header-restaurant__title {
+    padding: 40px 60px;
+  }
+}
 .sub-header-restaurant__title h1 {
   font-family: "shrikhand", Arial, Helvetica, sans-serif;
   font-weight: lighter;
   font-size: 1.8em;
+}
+@media all and (min-width: 1440px) {
+  .sub-header-restaurant__title h1 {
+    font-size: 2em;
+  }
 }
 .sub-header-restaurant__title i {
   font-size: 25px;
@@ -332,6 +440,11 @@ h4 {
     padding: 20px 40px;
   }
 }
+@media all and (min-width: 1440px) {
+  .menu {
+    padding: 20px 60px;
+  }
+}
 
 .sub-menu {
   display: flex;
@@ -344,6 +457,11 @@ h4 {
     flex-direction: initial;
     flex-wrap: wrap;
     column-gap: 20px;
+  }
+}
+@media all and (min-width: 1440px) {
+  .sub-menu {
+    column-gap: 40px;
   }
 }
 .sub-menu h2 {
@@ -359,6 +477,11 @@ h4 {
     flex: 100%;
   }
 }
+@media all and (min-width: 1024px) {
+  .sub-menu h2 {
+    margin-right: 96%;
+  }
+}
 
 .sub-menu-card {
   display: flex;
@@ -372,6 +495,11 @@ h4 {
 @media all and (min-width: 768px) {
   .sub-menu-card {
     flex: 40%;
+  }
+}
+@media all and (min-width: 1440px) {
+  .sub-menu-card {
+    flex: 20%;
   }
 }
 .sub-menu-card__title {
@@ -402,6 +530,11 @@ h4 {
   .menu-btn {
     padding-top: 40px;
     padding-bottom: 60px;
+  }
+}
+@media all and (min-width: 1024px) {
+  .menu-btn {
+    padding-top: 45px;
   }
 }
 .menu-btn a {

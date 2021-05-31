@@ -6,6 +6,12 @@
     color: $colour-white;
     margin-left: -32px;
     margin-right: 20px;
+    @include laptop-small{
+        margin-right: 10px;
+    }
+    @include laptop{
+        margin-right: 24px;
+    }
 }
 
 @mixin icon {
@@ -13,6 +19,15 @@
     margin-right: 20px;
     color: #7e7e7e;
     font-size: 18px;
+    @include laptop-small{
+        margin-right: 14px;
+    }
+    @include laptop{
+        margin-right: 20px;
+    }
+    @include mobile-s-only{
+        margin-top: 1px;
+    }
 }
 
 @mixin new-restaurant {
@@ -29,6 +44,24 @@
 
 @mixin tablet-only {
     @media all and (min-width: map-get($breakpoints, tablet)) {
+        @content;
+    }
+}
+
+@mixin laptop-small {
+    @media all and (min-width: map-get($breakpoints, laptop)) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media all and (min-width: map-get($breakpoints, laptop-l)) {
+        @content;
+    }
+}
+
+@mixin mobile-s-only {
+    @media all and (max-width: map-get($breakpoints, mobile-s)) {
         @content;
     }
 }

@@ -3,6 +3,12 @@
     &__logo img {
         width: 55%;
         padding: 20px;
+        @include laptop-small{
+            width: 40%;
+        }
+        @include laptop{
+            width: 30%;
+        }
     }
 }
 
@@ -14,10 +20,16 @@
         @include tablet-only{
             padding: 20px 40px;
         }
+        @include laptop{
+            padding: 30px 60px;
+        }
         img {
             width: 55%;
             @include tablet-only{
                 width: 30%;
+            }
+            @include laptop{
+                width: 20%;
             }
         }
         i {
@@ -28,6 +40,10 @@
             @include tablet-only{
                 margin-top: 10px;
                 padding-right: 230px;
+            }
+            @include laptop{
+                margin-top: 18px;
+                padding-right: 540px;
             }
         }
     }
