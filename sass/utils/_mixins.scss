@@ -26,3 +26,9 @@
     margin-top: 8px;
     margin-right: 6px;
 }
+
+@mixin tablet-only {
+    @media all and (min-width: map-get($breakpoints, tablet)) {
+        @content;
+    }
+}

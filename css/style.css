@@ -65,6 +65,11 @@ h4 {
   background: #353535;
   padding: 25px 20px;
 }
+@media all and (min-width: 768px) {
+  .footer {
+    padding: 30px 40px;
+  }
+}
 .footer__title h2 {
   font-family: "shrikhand", Arial, Helvetica, sans-serif;
   font-size: 20px;
@@ -72,9 +77,25 @@ h4 {
   color: white;
   margin-bottom: 10px;
 }
+@media all and (min-width: 768px) {
+  .footer__title h2 {
+    font-size: 1.7em;
+  }
+}
 .footer__nav ul {
   list-style-type: none;
   line-height: 1.8;
+}
+@media all and (min-width: 768px) {
+  .footer__nav ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media all and (min-width: 768px) {
+  .footer__nav li {
+    flex: 50%;
+  }
 }
 .footer__nav a {
   color: white;
@@ -138,6 +159,21 @@ h4 {
   flex-direction: column;
   row-gap: 25px;
 }
+@media all and (min-width: 768px) {
+  .operation {
+    padding-left: 40px;
+    padding-bottom: 60px;
+    flex-direction: initial;
+    flex-wrap: wrap;
+    column-gap: 50px;
+    row-gap: 35px;
+  }
+}
+@media all and (min-width: 768px) {
+  .operation h2 {
+    flex: 100%;
+  }
+}
 .operation__step {
   display: flex;
   background: #f6f6f6;
@@ -176,6 +212,20 @@ h4 {
   background: #f6f6f6;
   padding: 50px 20px;
 }
+@media all and (min-width: 768px) {
+  .restaurants {
+    padding: 45px 40px 60px 40px;
+    flex-direction: unset;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    column-gap: 40px;
+  }
+}
+@media all and (min-width: 768px) {
+  .restaurants h2 {
+    flex: 100%;
+  }
+}
 
 .restaurants-card {
   display: flex;
@@ -185,6 +235,11 @@ h4 {
   box-shadow: 1px 4px 12px 5px rgba(180, 180, 180, 0.384);
   overflow: hidden;
   position: relative;
+}
+@media all and (min-width: 768px) {
+  .restaurants-card {
+    flex: 40%;
+  }
 }
 .restaurants-card a {
   text-decoration: none;
