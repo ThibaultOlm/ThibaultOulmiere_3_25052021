@@ -11,14 +11,24 @@
         display: flex;
         justify-content: flex-start;
         padding: 20px;
+        @include tablet-only{
+            padding: 20px 40px;
+        }
         img {
             width: 55%;
+            @include tablet-only{
+                width: 30%;
+            }
         }
         i {
             color: #353535;
             font-size: 20px;
             margin-top: 5px;
             padding-right: 68px;
+            @include tablet-only{
+                margin-top: 10px;
+                padding-right: 230px;
+            }
         }
     }
 }
