@@ -31,3 +31,24 @@ h4 {
     font-weight: 300;
     font-size: 16px;
 }
+
+@mixin sub-menu-title {
+    font-weight: 400;
+    font-size: 1.2em;
+    border-bottom: $colour-tertiary 3.5px solid;
+    margin-right: 86%;
+    padding-bottom: 6px;
+}
+
+@mixin dish-title {
+    font-size: 1.15em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@mixin dish-sub-title {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}

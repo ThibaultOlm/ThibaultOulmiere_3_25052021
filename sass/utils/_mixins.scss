@@ -1,0 +1,28 @@
+@mixin button-number {
+    background: $colour-primary;
+    font-size: 14px;
+    border-radius: 50%;
+    padding: 4px 8px;
+    color: $colour-white;
+    margin-left: -32px;
+    margin-right: 20px;
+}
+
+@mixin icon {
+    margin-top: 3px;
+    margin-right: 20px;
+    color: #7e7e7e;
+    font-size: 18px;
+}
+
+@mixin new-restaurant {
+    padding: 5px 10px;
+    background: $colour-tertiary;
+    color: darken($colour-tertiary, 40%)
+}
+
+@mixin like-restaurant {
+    font-size: 25px;
+    margin-top: 8px;
+    margin-right: 6px;
+}
