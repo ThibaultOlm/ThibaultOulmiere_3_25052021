@@ -6,6 +6,7 @@ $colour-background-secondary: #eaeaea;
 $colour-white: #ffffff;
 $colour-over: #f5edff;
 $colour-gradient: linear-gradient(170deg, $colour-secondary, $colour-primary);
+$colour-gradient-like: linear-gradient(190deg, $colour-primary, $colour-secondary);
 $colour-gradient-light: linear-gradient(170deg, lighten($colour-secondary, 5%), lighten($colour-primary, 5%));
 $shadow-color:rgba(180, 180, 180, 0.384);
 

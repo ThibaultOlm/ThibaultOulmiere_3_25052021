@@ -52,11 +52,11 @@ h4 {
   position: fixed;
   display: flex;
   background-color: #ffffff;
-  z-index: -1;
+  z-index: -99;
   align-items: center;
   justify-content: center;
   animation: loading 600ms;
-  animation-delay: 1s;
+  animation-delay: 3s;
   animation-fill-mode: forwards;
 }
 
@@ -134,9 +134,31 @@ h4 {
   }
 }
 /** Remplissage like **/
-.fa-heart {
-  font-weight: 900;
-  background: linear-gradient(170deg, #FF79DA, #9356DC);
+.fa-heart:hover {
+  font-weight: bold;
+  background: linear-gradient(190deg, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.fa-heart:hover::after {
+  opacity: 1;
+}
+.fa-heart .fa-heart::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-weight: bold;
+  background: linear-gradient(190deg, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 5000ms;
 }
 
 /** Apparition des plats progressivements **/
@@ -166,6 +188,21 @@ h4 {
   animation: card-appearance 1s;
   animation-delay: 1000ms;
   animation-fill-mode: both;
+}
+
+/** Validation du plat **/
+.sub-menu-card:hover {
+  overflow: hidden;
+}
+
+.sub-menu-card:hover > .sub-menu-card__validate {
+  display: initial;
+  color: #ffffff;
+  background: #99E2D0;
+  padding: 27.5px;
+  margin: -13px;
+  align-items: center;
+  overflow: hidden;
 }
 
 .header {
@@ -529,7 +566,6 @@ h4 {
   font-size: 25px;
   margin-top: 8px;
   margin-right: 6px;
-  background-clip: content-box;
 }
 
 .sub-header-restaurant {

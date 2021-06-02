@@ -8,11 +8,11 @@
     position: fixed;
     display: flex;
     background-color: $colour-white;
-    z-index: -1;
+    z-index: -99;
     align-items: center;
     justify-content: center;
     animation: loading 600ms;
-    animation-delay: 1s;
+    animation-delay: 3s;
     animation-fill-mode: forwards;
 }
 
@@ -95,9 +95,33 @@
 
   /** Remplissage like **/
 
-.fa-heart {
-    font-weight: 900;
-    background: $colour-gradient;
+  .fa-heart {
+      &:hover {
+        font-weight: bold;
+        background: $colour-gradient-like;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        &::after {
+              opacity:1;
+        }
+      }
+      .fa-heart::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          font-weight: bold;
+          background: $colour-gradient-like;
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent;
+          opacity: 0;
+          z-index: -1;
+          transition: opacity 5000ms;
+      }
 }
 
 /** Apparition des plats progressivements **/
@@ -129,4 +153,20 @@
     animation: card-appearance 1s;
     animation-delay: 1000ms;
     animation-fill-mode: both;
+}
+
+/** Validation du plat **/
+
+.sub-menu-card:hover {
+    overflow: hidden;
+}
+
+.sub-menu-card:hover > .sub-menu-card__validate {
+        display: initial;
+        color: $colour-white;
+        background: $colour-tertiary;
+        padding: 27.5px;
+        margin: -13px;
+        align-items: center;
+        overflow: hidden;
 }
