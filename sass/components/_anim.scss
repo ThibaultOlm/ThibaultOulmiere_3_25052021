@@ -1,3 +1,5 @@
+/** Loader page d'accueil **/
+
 .loader {
     width: 100%;
     height: 100%;
@@ -90,3 +92,41 @@
       transform: translate(-120px, 0);
     }
   }
+
+  /** Remplissage like **/
+
+.fa-heart {
+    font-weight: 900;
+    background: $colour-gradient;
+}
+
+/** Apparition des plats progressivements **/
+
+@keyframes card-appearance {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.sub-menu:nth-child(1) {
+        animation: card-appearance 1s;
+        animation-delay: 500ms;
+        animation-fill-mode: both;
+}
+
+.sub-menu:nth-child(2) {
+    animation: card-appearance 1s;
+    animation-delay: 750ms;
+    animation-fill-mode: both;
+}
+
+.sub-menu:nth-child(3) {
+    animation: card-appearance 1s;
+    animation-delay: 1000ms;
+    animation-fill-mode: both;
+}
