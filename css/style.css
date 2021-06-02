@@ -52,7 +52,7 @@ h4 {
   position: fixed;
   display: flex;
   background-color: #ffffff;
-  z-index: -99;
+  z-index: 99;
   align-items: center;
   justify-content: center;
   animation: loading 600ms;
@@ -191,18 +191,24 @@ h4 {
 }
 
 /** Validation du plat **/
+.sub-menu-card:hover > .sub-menu-card__title {
+  max-width: 65%;
+}
+
 .sub-menu-card:hover {
   overflow: hidden;
 }
-
-.sub-menu-card:hover > .sub-menu-card__validate {
-  display: initial;
+.sub-menu-card:hover > .sub-menu-card__price {
+  display: flex;
+  align-items: flex-end;
+}
+.sub-menu-card:hover > .sub-menu-card__price .fa-check-circle {
+  display: block;
+  background-color: #99E2D0;
   color: #ffffff;
-  background: #99E2D0;
-  padding: 27.5px;
-  margin: -13px;
-  align-items: center;
-  overflow: hidden;
+  font-size: 20px;
+  padding: 28px;
+  margin: -14px -14px -14px 6px;
 }
 
 .header {
@@ -702,7 +708,7 @@ h4 {
   white-space: nowrap;
   overflow: hidden;
 }
-.sub-menu-card__validate {
+.sub-menu-card i {
   display: none;
 }
 

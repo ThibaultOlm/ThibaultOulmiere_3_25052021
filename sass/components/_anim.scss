@@ -8,7 +8,7 @@
     position: fixed;
     display: flex;
     background-color: $colour-white;
-    z-index: -99;
+    z-index: 99;
     align-items: center;
     justify-content: center;
     animation: loading 600ms;
@@ -157,16 +157,22 @@
 
 /** Validation du plat **/
 
-.sub-menu-card:hover {
-    overflow: hidden;
+.sub-menu-card:hover > .sub-menu-card__title {
+    max-width: 65%;
 }
 
-.sub-menu-card:hover > .sub-menu-card__validate {
-        display: initial;
-        color: $colour-white;
-        background: $colour-tertiary;
-        padding: 27.5px;
-        margin: -13px;
-        align-items: center;
-        overflow: hidden;
+.sub-menu-card:hover {
+    overflow: hidden;
+    > .sub-menu-card__price {
+        display: flex;
+        align-items: flex-end;
+        .fa-check-circle {
+            display: block;
+            background-color: $colour-tertiary;
+            color: $colour-white;
+            font-size: 20px;
+            padding: 28px;
+            margin: -14px -14px -14px 6px;
+        }
+    }
 }
