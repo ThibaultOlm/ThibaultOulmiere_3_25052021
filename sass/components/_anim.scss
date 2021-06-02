@@ -6,11 +6,11 @@
     position: fixed;
     display: flex;
     background-color: $colour-white;
-    z-index: 99;
+    z-index: -1;
     align-items: center;
     justify-content: center;
     animation: loading 600ms;
-    animation-delay: 3s;
+    animation-delay: 1s;
     animation-fill-mode: forwards;
 }
 
@@ -20,6 +20,7 @@
     }
     100% {
         opacity: 0;
+        z-index: -1;
     }
 }
 

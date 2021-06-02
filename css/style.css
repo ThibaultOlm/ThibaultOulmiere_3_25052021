@@ -51,11 +51,11 @@ h4 {
   position: fixed;
   display: flex;
   background-color: #ffffff;
-  z-index: 99;
+  z-index: -1;
   align-items: center;
   justify-content: center;
   animation: loading 600ms;
-  animation-delay: 3s;
+  animation-delay: 1s;
   animation-fill-mode: forwards;
 }
 
@@ -65,6 +65,7 @@ h4 {
   }
   100% {
     opacity: 0;
+    z-index: -1;
   }
 }
 .loader span {
@@ -302,6 +303,29 @@ h4 {
   text-decoration: none;
   font-weight: 700;
   color: white;
+  box-shadow: 1px 4px 12px 5px rgba(180, 180, 180, 0.384);
+  /** &:hover {
+      &::after {
+          opacity: 1;
+      }
+  }
+  &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: $colour-primary;
+      box-shadow: $shadow-secondary;
+      opacity: 0;
+      z-index: -1;
+      transition: opacity 3000ms;
+  } **/
+}
+.sub-header__btn a:hover {
+  background: linear-gradient(170deg, #ff93e1, #a16be0);
+  box-shadow: 1px 4px 12px 5px rgba(142, 142, 142, 0.384);
 }
 
 .operation {
@@ -632,8 +656,31 @@ h4 {
   text-decoration: none;
   font-weight: 700;
   color: white;
+  box-shadow: 1px 4px 12px 5px rgba(180, 180, 180, 0.384);
+  /** &:hover {
+      &::after {
+          opacity: 1;
+      }
+  }
+  &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: $colour-primary;
+      box-shadow: $shadow-secondary;
+      opacity: 0;
+      z-index: -1;
+      transition: opacity 3000ms;
+  } **/
   padding: 18px 60px;
   font-size: 1.2em;
+}
+.menu-btn a:hover {
+  background: linear-gradient(170deg, #ff93e1, #a16be0);
+  box-shadow: 1px 4px 12px 5px rgba(142, 142, 142, 0.384);
 }
 
 /*# sourceMappingURL=style.css.map */

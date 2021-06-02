@@ -1,8 +1,32 @@
 @mixin gradient-button {
     padding: 18px;
     border-radius: 35px;
-    background: linear-gradient(170deg, #FF79DA, #9356DC);
+    background: $colour-gradient;
     text-decoration: none;
     font-weight: 700;
     color: white;
+    box-shadow: $shadow-primary;
+    &:hover {
+        background: $colour-gradient-light;
+        box-shadow: $shadow-secondary;
+    }
+
+    /** &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: $colour-primary;
+        box-shadow: $shadow-secondary;
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 3000ms;
+    } **/
 }

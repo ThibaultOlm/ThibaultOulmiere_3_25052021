@@ -5,8 +5,12 @@ $colour-background: #f6f6f6;
 $colour-background-secondary: #eaeaea;
 $colour-white: #ffffff;
 $colour-over: #f5edff;
+$colour-gradient: linear-gradient(170deg, $colour-secondary, $colour-primary);
+$colour-gradient-light: linear-gradient(170deg, lighten($colour-secondary, 5%), lighten($colour-primary, 5%));
+$shadow-color:rgba(180, 180, 180, 0.384);
 
-$shadow-primary: 1px 4px 12px 5px rgba(180, 180, 180, 0.384);
+$shadow-primary: 1px 4px 12px 5px $shadow-color;
+$shadow-secondary: 1px 4px 12px 5px darken($shadow-color, 15%);
 
 $border-rounded: 18px;
 
