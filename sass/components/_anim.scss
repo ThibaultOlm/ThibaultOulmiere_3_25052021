@@ -8,10 +8,10 @@
     position: fixed;
     display: flex;
     background-color: $colour-white;
-    z-index: -99;
+    z-index: 99;
     align-items: center;
     justify-content: center;
-    animation: loading 600ms;
+    animation: loading 700ms;
     animation-delay: 3s;
     animation-fill-mode: forwards;
 }
@@ -144,21 +144,52 @@
 /** Validation du plat **/
 
 .sub-menu-card:hover > .sub-menu-card__title {
-    max-width: 65%;
+  animation: title 1500ms;
+  animation-fill-mode: both;
 }
 
 .sub-menu-card:hover {
     overflow: hidden;
-    > .sub-menu-card__price {
-        display: flex;
-        align-items: flex-end;
+    > .sub-menu-card__check {
+        background-color: $colour-tertiary;
+        padding: 28px;
+        margin: -14px -14px -14px 0px;
+        animation: validate-background-appearance 1500ms;
+        animation-fill-mode: both;
         .fa-check-circle {
             display: block;
-            background-color: $colour-tertiary;
             color: $colour-white;
             font-size: 20px;
-            padding: 28px;
-            margin: -14px -14px -14px 6px;
+            animation: validate-appearance 1000ms;
+            animation-delay: 350ms;
+            animation-fill-mode: both;
         }
     }
+}
+
+@keyframes validate-background-appearance {
+  0% {
+    transform: translateX(70px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes validate-appearance {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes title {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 400px;
+  }
 }

@@ -81,9 +81,13 @@
     }
     &__title {
         line-height: 1.4;
-        max-width: 85%;
+        width: 100%;
         h3 {
             @include dish-title;
+        }
+        &__price {
+            display: flex;
+            justify-content: space-between
         }
         h4 {
             @include dish-sub-title;
