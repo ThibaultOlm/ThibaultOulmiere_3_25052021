@@ -8,7 +8,7 @@
     position: fixed;
     display: flex;
     background-color: $colour-white;
-    z-index: 99;
+    z-index: -99;
     align-items: center;
     justify-content: center;
     animation: loading 600ms;
@@ -97,30 +97,16 @@
 
   .fa-heart {
       &:hover {
-        font-weight: bold;
-        background: $colour-gradient-like;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        &::after {
-              opacity:1;
+        &::before {
+            font-weight: bold;
+            background: $colour-gradient-like;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;    
         }
       }
-      .fa-heart::after {
-          content: "";
-          position: absolute;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: 0;
-          font-weight: bold;
-          background: $colour-gradient-like;
-          background-clip: text;
-          -webkit-background-clip: text;
-          color: transparent;
-          opacity: 0;
-          z-index: -1;
-          transition: opacity 5000ms;
+      &::before {
+          transition: color 600ms;
       }
 }
 

@@ -52,7 +52,7 @@ h4 {
   position: fixed;
   display: flex;
   background-color: #ffffff;
-  z-index: 99;
+  z-index: -99;
   align-items: center;
   justify-content: center;
   animation: loading 600ms;
@@ -134,31 +134,15 @@ h4 {
   }
 }
 /** Remplissage like **/
-.fa-heart:hover {
+.fa-heart:hover::before {
   font-weight: bold;
   background: linear-gradient(190deg, #9356DC, #FF79DA);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
-.fa-heart:hover::after {
-  opacity: 1;
-}
-.fa-heart .fa-heart::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  font-weight: bold;
-  background: linear-gradient(190deg, #9356DC, #FF79DA);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  opacity: 0;
-  z-index: -1;
-  transition: opacity 5000ms;
+.fa-heart::before {
+  transition: color 600ms;
 }
 
 /** Apparition des plats progressivements **/
