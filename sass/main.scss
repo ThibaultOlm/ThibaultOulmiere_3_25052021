@@ -1,11 +1,11 @@
 @import "./utils/variables";
 @import "./utils/functions";
 @import "./utils/mixins";
+@import "./utils/anim";
 
 @import "./base/base";
 @import "./base/typography";
 
-@import "./components/anim";
 @import "./components/buttons";
 
 @import "./layouts/header";

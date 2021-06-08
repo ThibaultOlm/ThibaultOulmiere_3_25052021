@@ -1,49 +1,7 @@
 @charset "UTF-8";
-/* Eléments principaux de la page */
+/** Loader page d'accueil **/
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Définition des polices personnalisées */
-body {
-  font-family: "Roboto", Arial, sans-serif;
-  font-weight: 400;
-}
-
-h1 {
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
-  font-weight: 700;
-  font-size: 1.4em;
-}
-
-h2 {
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
-  font-weight: 900;
-  font-size: 24px;
-}
-
-h3 {
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
-  font-weight: 700;
-  font-size: 20px;
-}
-@media all and (max-width: 320px) {
-  h3 {
-    font-size: 1em;
-  }
-}
-
-h4 {
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-}
-
-/** Loader page d'accueil **/
 .loader {
   width: 100%;
   height: 100%;
@@ -175,18 +133,21 @@ h4 {
 }
 
 /** Validation du plat **/
-.sub-menu-card:hover > .sub-menu-card__title {
-  animation: title 1500ms;
-  animation-fill-mode: both;
-}
-
 .sub-menu-card:hover {
   overflow: hidden;
+}
+.sub-menu-card:hover > .sub-menu-card__title p {
+  animation: price 1500ms;
+  animation-fill-mode: both;
+}
+.sub-menu-card:hover > .sub-menu-card__title h4 {
+  animation: title 1000ms;
+  animation-fill-mode: both;
 }
 .sub-menu-card:hover > .sub-menu-card__check {
   background-color: #99E2D0;
   padding: 28px;
-  margin: -14px -14px -14px 0px;
+  margin: -14px -14px -14px 6px;
   animation: validate-background-appearance 1500ms;
   animation-fill-mode: both;
 }
@@ -194,7 +155,7 @@ h4 {
   display: block;
   color: #ffffff;
   font-size: 20px;
-  animation: validate-appearance 1000ms;
+  animation: validate-appearance 500ms;
   animation-delay: 350ms;
   animation-fill-mode: both;
 }
@@ -215,14 +176,64 @@ h4 {
     transform: rotate(360deg);
   }
 }
-@keyframes title {
+@keyframes price {
   0% {
-    width: 100%;
+    transform: translateX(65px);
   }
   100% {
-    width: 400px;
+    transform: translateX(-5px);
   }
 }
+@keyframes title {
+  0% {
+    width: max(350px);
+  }
+  100% {
+    width: max(250px);
+  }
+}
+/* Eléments principaux de la page */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Définition des polices personnalisées */
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 1.4em;
+}
+
+h2 {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  font-size: 24px;
+}
+
+h3 {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+}
+@media all and (max-width: 320px) {
+  h3 {
+    font-size: 1em;
+  }
+}
+
+h4 {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+}
+
 .header {
   text-align: center;
 }
@@ -702,12 +713,12 @@ h4 {
 }
 @media all and (min-width: 1440px) {
   .sub-menu-card {
-    flex: 20%;
+    flex: 25%;
   }
 }
 .sub-menu-card__title {
   line-height: 1.4;
-  width: 100%;
+  flex: 80%;
 }
 .sub-menu-card__title h3 {
   font-size: 1.15em;
@@ -724,7 +735,7 @@ h4 {
   white-space: nowrap;
   overflow: hidden;
 }
-.sub-menu-card i {
+.sub-menu-card__check i {
   display: none;
 }
 

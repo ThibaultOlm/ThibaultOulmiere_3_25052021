@@ -77,11 +77,11 @@
         flex: 40%;
     }
     @include laptop{
-        flex: 20%;
+        flex: 25%;
     }
     &__title {
         line-height: 1.4;
-        width: 100%;
+        flex: 80%;
         h3 {
             @include dish-title;
         }
@@ -93,8 +93,10 @@
             @include dish-sub-title;
         }
     }
-    i {
-        display: none;
+    &__check {
+        i {
+            display: none;
+        }
     }
 }
 

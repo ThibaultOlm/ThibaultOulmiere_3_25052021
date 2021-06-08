@@ -143,24 +143,29 @@
 
 /** Validation du plat **/
 
-.sub-menu-card:hover > .sub-menu-card__title {
-  animation: title 1500ms;
-  animation-fill-mode: both;
-}
-
 .sub-menu-card:hover {
     overflow: hidden;
+    > .sub-menu-card__title {
+      p {
+        animation: price 1500ms;
+        animation-fill-mode: both;
+      }
+      h4 {
+        animation: title 1000ms;
+        animation-fill-mode: both;
+      }
+    }
     > .sub-menu-card__check {
         background-color: $colour-tertiary;
         padding: 28px;
-        margin: -14px -14px -14px 0px;
+        margin: -14px -14px -14px 6px;
         animation: validate-background-appearance 1500ms;
         animation-fill-mode: both;
         .fa-check-circle {
             display: block;
             color: $colour-white;
             font-size: 20px;
-            animation: validate-appearance 1000ms;
+            animation: validate-appearance 500ms;
             animation-delay: 350ms;
             animation-fill-mode: both;
         }
@@ -185,11 +190,20 @@
   }
 }
 
-@keyframes title {
+@keyframes price {
   0% {
-    width: 100%;
+    transform: translateX(65px);
   }
   100% {
-    width: 400px;
+    transform: translateX(-5px);
+  }
+}
+
+@keyframes title {
+  0% {
+    width: max(350px);
+  }
+  100% {
+    width: max(250px);
   }
 }
