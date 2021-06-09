@@ -100,9 +100,8 @@
         &::before {
             font-weight: bold;
             background: $colour-gradient-like;
-            background-clip: text;
             -webkit-background-clip: text;
-            color: transparent;    
+            color: transparent;
         }
       }
       &::before {
